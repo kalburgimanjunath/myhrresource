@@ -1,7 +1,9 @@
 import Hero from "../components/hero";
-
+import { motion } from "framer-motion";
 export default function Home() {
   const clients = ["Google", "honeywell", "wellsforgo", "HTS"];
+  const list = { hidden: { opacity: 0 } };
+  const item = { hidden: { x: -10, opacity: 0 } };
   return (
     <div className="w-full">
       <Hero title="Right resources" subtitle="at the right time." />
@@ -17,16 +19,16 @@ export default function Home() {
             goals and how they can use technology to obtain those goals.
           </p>
           <p>
-            <ul className="list-disc">
-              <li>
+            <motion.ul className="list-disc" animate="hidden" variants={list}>
+              <motion.li variants={item}>
                 Any business would be successful provided RIGHT people are
                 hired. And that is where HR Giants specialize in.
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={item}>
                 We supply highly qualified professionals to clients to meet
                 their organization business and IT goals.
-              </li>
-            </ul>
+              </motion.li>
+            </motion.ul>
           </p>
         </div>
         <div>

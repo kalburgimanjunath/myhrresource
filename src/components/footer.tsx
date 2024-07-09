@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <div>Footer</div>;
+  return <div>© HR 2024. All rights reserved.</div>;
 }
